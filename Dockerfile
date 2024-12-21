@@ -11,7 +11,6 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     unzip \
-    libcurl \
     && apt-get clean
 
 # Set working directory
