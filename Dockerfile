@@ -19,9 +19,6 @@ WORKDIR /app
 # Salin file skrip Node.js ke dalam container
 COPY index.js .
 
-# Salin file package.json jika ada (opsional, hanya jika Anda memiliki dependencies lain)
-COPY /app .
-
 # Install dependencies Node.js (jika ada)
 RUN npm install || true
 
