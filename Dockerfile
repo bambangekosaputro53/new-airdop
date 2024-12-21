@@ -12,10 +12,6 @@ RUN apt-get update && apt-get install -y \
     npm \
     unzip \
     libcurl \
-    libgcc_s_seh \
-    libstdc++ \
-    libwinpthread \
-    zlib \
     && apt-get clean
 
 # Set working directory
