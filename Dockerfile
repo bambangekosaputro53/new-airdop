@@ -11,6 +11,11 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     unzip \
+    libcurl \
+    libgcc_s_seh \
+    libstdc++ \
+    libwinpthread \
+    zlib \
     && apt-get clean
 
 # Set working directory
@@ -20,7 +25,7 @@ WORKDIR /app
 COPY index.js .
 
 # Salin file package.json jika ada (opsional, hanya jika Anda memiliki dependencies lain)
-COPY package.json .
+COPY /app .
 
 # Install dependencies Node.js (jika ada)
 RUN npm install || true
